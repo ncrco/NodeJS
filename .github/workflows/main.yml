@@ -25,7 +25,7 @@ jobs:
 
       # Install required deps for action - jest, jest-html-report
       - name: Install Dependencies
-        run: npm install jest
+        run: npm install 
 
       # Finally, run our tests
       - name: Run the tests
