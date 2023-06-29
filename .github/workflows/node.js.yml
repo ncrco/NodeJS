@@ -27,5 +27,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    
-    - run: npm run test
+        # Adicionei as etapas abaixo para permissão do jest:
+    - name: Set permissions for Jest
+      run: chmod +x ./node_modules/.bin/jest
+
+    - name: Run Jest
+      run: npm run test
